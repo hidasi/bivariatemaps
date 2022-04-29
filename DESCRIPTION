@@ -1,0 +1,12 @@
+Package: bivariatemaps
+Type: Package
+Title: Creates Bivariate Maps
+Version: 1.0
+Author: Jose Hidasi-Neto
+Maintainer: Jose Hidasi-Neto <hidasineto@gmail.com>
+Description: This package contains functions to generate a grid from a shapefile and to plot Bivariate Maps.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: classInt, raster, rgeos, sp
+RoxygenNote: 7.1.2
