@@ -13,6 +13,9 @@ GridFilter(shape, resol = 1, prop = 0)
 
 \item{prop}{minimum value of area covered by the grid cell. The default is 0 (i.e. it does not delete any grid cell)}
 }
+\value{
+A "gridded" shapefile. Plot this output to take a look at it.
+}
 \description{
 Creates a shape intersected with a grid. The user can exclude cells based on area coverage. For example, if the shape covers only 50 percent of some cells, the user can choose to exclude or maintain these cells.
 }

@@ -3,6 +3,7 @@
 #' @examples
 #' # https://rfunctions.blogspot.com/2015/03/bivariate-maps-bivariatemap-function.html
 #' @description Creates a Bivariate Map using two rasters and a color matrix created with colmat() function.
+#' @return A plot with the bivariate map.
 #' @param rasterx raster
 #' @param rastery raster
 #' @param colormatrix color matrix from colmat() function

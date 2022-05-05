@@ -15,6 +15,9 @@ bivariate.map(rasterx, rastery, colormatrix, nquantiles = 10)
 
 \item{nquantiles}{number of quantiles in color matrix (same as used when using colmat() function)}
 }
+\value{
+A plot with the bivariate map.
+}
 \description{
 Creates a Bivariate Map using two rasters and a color matrix created with colmat() function.
 }

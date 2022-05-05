@@ -29,13 +29,14 @@ colmat(
 
 \item{ylab}{character variable}
 }
+\value{
+Two outputs: a color matrix object to be used in bivariate.map() function, and a plot of the color matrix.
+}
 \description{
 Creates a color matrix to be used in bivariate.map() function.
 }
 \examples{
-col.matrix<-colmat(nquantiles=10)
-
-col.matrix<-colmat(nquantiles=10, upperleft="blue", upperright="yellow", bottomleft="green", bottomright="red", xlab="My x label", ylab="My y label")
+col.matrix<-colmat(nquantiles=10, xlab="My x label", ylab="My y label")
 
 # https://rfunctions.blogspot.com/2015/03/bivariate-maps-bivariatemap-function.html
 }
