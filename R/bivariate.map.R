@@ -9,12 +9,12 @@
 #' @param colormatrix color matrix from colmat() function
 #' @param nquantiles number of quantiles in color matrix (same as used when using colmat() function)
 bivariate.map<-function(rasterx, rastery, colormatrix, nquantiles=10){
-quanmean<-raster::getValues(rasterx)
+quanmean<-terra::values(rasterx)
 temp<-data.frame(quanmean, quantile=rep(NA, length(quanmean)))
 brks<-with(temp, stats::quantile(temp,na.rm=TRUE, probs = c(seq(0,1,1/nquantiles))))
 r1<-within(temp, quantile <- base::cut(quanmean, breaks = brks, labels = 2:length(brks),include.lowest = TRUE))
 quantr<-data.frame(r1[,2])
-quanvar<-raster::getValues(rastery)
+quanvar<-terra::values(rastery)
 temp<-data.frame(quanvar, quantile=rep(NA, length(quanvar)))
 brks<-with(temp, stats::quantile(temp,na.rm=TRUE, probs = c(seq(0,1,1/nquantiles))))
 r2<-within(temp, quantile <- base::cut(quanvar, breaks = brks, labels = 2:length(brks),include.lowest = TRUE))
@@ -30,5 +30,6 @@ for(i in 1:length(quantr[,1])){
   b<-as.numeric.factor(quantr2[i,1])
   cols[i]<-as.numeric(col.matrix2[b,a])}
 r<-rasterx
-r[1:length(r)]<-cols
+terra::values(r)<-cols
+terra::plot(r,frame.plot=F,axes=F,box=F,add=F,legend=F,col=as.vector(colormatrix))
 return(r)}
