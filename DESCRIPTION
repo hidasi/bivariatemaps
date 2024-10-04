@@ -1,10 +1,14 @@
 Package: bivariatemaps
 Title: Creates Bivariate Maps
-Version: 1.2
+Version: 1.7
 Authors@R: person("Jose","Hidasi-Neto", email = "hidasineto@gmail.com", role = c("aut","cre"))
-Description: Contains functions to plot bivariate maps. For more info, see: Hidasi-Neto, J (2015) <https://rfunctions.blogspot.com/2015/03/bivariate-maps-bivariatemap-function.html>.
+Description: Contains functions mainly focused to plotting bivariate maps.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
-Imports: classInt, terra, base, graphics, stats
+Imports: classInt, terra, base, graphics, stats, caper, picante, ape,
+        betapart, CommEcol, grDevices
 RoxygenNote: 7.2.3
+NeedsCompilation: no
+Packaged: 2024-10-04 21:38:56 UTC; heavy
+Author: Jose Hidasi-Neto [aut, cre]
+Maintainer: Jose Hidasi-Neto <hidasineto@gmail.com>

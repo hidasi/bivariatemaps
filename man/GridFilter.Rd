@@ -2,22 +2,22 @@
 % Please edit documentation in R/GridFilter.R
 \name{GridFilter}
 \alias{GridFilter}
-\title{GridFilter: Intersect Shape with a Grid and Exclude Cells Based on Area Coverage}
+\title{GridFilter: Intersect a Shape with a Grid and Exclude Cells Based on Area Coverage}
 \usage{
 GridFilter(shape, resol = 1, prop = 0)
 }
 \arguments{
-\item{shape}{shapefile}
+\item{shape}{A shapefile.}
 
-\item{resol}{resolution}
+\item{resol}{The resolution (in degrees) of the grid you want to overlay. The default is 1 degree of longitude and latitude.}
 
-\item{prop}{minimum value of area covered by the grid cell. The default is 0 (i.e. it does not delete any grid cell)}
+\item{prop}{The minimum value of area covered by the grid cell. The default is 0 (i.e. it does not delete any grid cell).}
 }
 \value{
-A "gridded" shapefile. Plot this output to take a look at it.
+A gridded shapefile.
 }
 \description{
-Creates a shape intersected with a grid. The user can exclude cells based on area coverage. For example, if the shape covers only 50 percent of some cells, the user can choose to exclude or maintain these cells.
+Overlay a shapefile with a grid. Then, excludes grid cells that do not cover a specific amount of the Shape area.
 }
 \examples{
 # https://rfunctions.blogspot.com/2014/12/gridfilter-intersect-grid-with-shape.html

@@ -4,7 +4,14 @@
 \alias{bivariate.map}
 \title{bivariate.map: Create a Bivariate Map}
 \usage{
-bivariate.map(rasterx, rastery, colormatrix, nquantiles = 10)
+bivariate.map(
+  rasterx,
+  rastery,
+  colormatrix,
+  nquantiles = 10,
+  trivariate = F,
+  rasterz
+)
 }
 \arguments{
 \item{rasterx}{raster}
@@ -14,6 +21,10 @@ bivariate.map(rasterx, rastery, colormatrix, nquantiles = 10)
 \item{colormatrix}{color matrix from colmat() function}
 
 \item{nquantiles}{number of quantiles in color matrix (same as used when using colmat() function)}
+
+\item{trivariate}{boolean indicating if should use a third raster for a "trivariate" map where the third variable corresponds to the transparency (alpha) of colors.}
+
+\item{rasterz}{raster (only if trivariate=T)}
 }
 \value{
 A plot with the bivariate map.
